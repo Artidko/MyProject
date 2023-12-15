@@ -3,50 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <h1>Register Form</h1>
-    <br>
-    ชื่อจริง<input type="text"> นามสกุล <input type="text">
-    <br>
-    <br>
-    อายุ<input type="number" min="0" max="100"> 
-    <br>
-    <div>
-        เพศ
-        <div>
-            <input name="gender" type="radio"> ชาย
-        </div>
-        <div>
-            <input name="gender" type="radio"> หญิง
-        </div>
-        <div>
-            <input name="gender" type="radio"> ไม่ระบุเพศ
-        </div>
-    </div> 
-    <br>
-    <div>
-        สิ่งที่สนใจ
-        <div>
-            <input name="interest" type="checkbox"> หนังสือ;
-        </div>
-        <div>
-            <input name="interest" type="checkbox"> หนัง;
-        </div>
-        <div>
-            <input name="interest" type="checkbox"> การเรียน
-        </div>
-    </div>
-    <div>
-         คำอธิบายตัวตนเพิ่มเติม
-        <div>
-            <textarea>
+    <title>SawatDee Kub</title>
+ <style>
+   /*สิ่งที่อยู่ตรงนี้มีไว้ใฟ้DEVอ่าน*/
+   /*แต่ง (id,class,Dom) 2.แต่งอะไร*/
+   @font-face {
+      font-family: 'Kanit';
+      src: url(./Kanit/Kanit-Regular.ttf);
+   }
 
-            </textarea>
-        </div>
-        <button>ส่งข้อมูล</button>
+   body{
+      font-family: Kanit;
+      font-size: 14px;
+   }
+
+   .container{
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: azure;
+      padding: 10px;
+   }
+
+   .header{
+      font-size: 24px;
+      text-align: center;
+   }
+   
+   .header-Form{
+      width: 200px;
+   }
+
+   .flex{
+      display: flex;
+   }
+
+   .form-input{
+      margin-bottom: 10px;
+   }
+
+   .center{
+      text-align: center;
+   }
+
+   input.form, textarea{
+      border: 1px gainsboro solid;
+      width: 100%;
+   }
+
+   .button{
+      border: 0;
+      width: 100%;
+      height: 40px;
+      background-color: blue;
+      color: azure;
+   }
+
+ </style>
+</head>
+
+<body>
+   <!--ส่วนที่แสดงออกไปยัง Browser-->   
+   <!-- 3.Form -->
+<div class="container">
+   <div class="header">
+      Register Form
+   </div>
+
+<div class="flex form-input">
+   <div class="header-Form">ชื่อจริง</div>
+   <input class="form" type="text">
+</div>
+
+<div class="flex form-input">
+   <div class="header-Form">นามสกุล</div>
+   <input class="form" typ="text">
+</div>
+
+<div class="flex form-input">
+   <div class="header-Form">อายุ</div>
+   <input class="form" type="number" min="0" max="100" >
+</div>
+
+<div class="flex gender form-input">
+   <div class="header-Form">เพศ</div>
+   <div>
+      <input name="gender" type="radio" > ชาย
+      <input name="gender" type="radio" > หญิง
+      <input name="gender" type="radio"> ไม่ระบุเพศ
+   </div>
+</div>
+
+<div class="form-input">
+    สิ่งที่สนใจ
+    <div><input name="interest" type="checkbox" > หนังสือ</div>
+    <div><input name="interest" type="checkbox" > หนัง</div>
+    <div><input name="interest" type="checkbox"> การเรียน </div>
+</div>
+    <div class="form-input">
+       คำอธิบายตัวตนเพิ่ม
+       <div>
+           <textarea></textarea>
+       </div>
+       <div class="center">
+          <button class="button">ส่งข้อมูล</button>
+      </div>
     </div>
-     
+
+</div>
+
+
 </body>
 </html>
